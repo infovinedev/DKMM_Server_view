@@ -1,72 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%
-	String inflow_channel = request.getParameter("inflow_channel");
-	String url = null;
-	if(inflow_channel!=null){
-		switch(inflow_channel){
-			case "RkFDRUJPT0tfUA==":		//페이스북 프로모션
-				url = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
-				break;
-			case "TkFWRVJfUA==":		//네이버 프로모션
-				url = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
-				break;
-			case "S0FLQU9fUA==":		//카카오 프로모션
-				url = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
-				break;
-			case "R09PR0xFX1A=":		//구글 프로모션
-				url = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
-				break;
-			case "RkFDRUJPT0s=":		//페이스북
-				url = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
-				break;
-			case "TkFWRVI=":		//네이버
-				url = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
-				break;
-			case "S0FLQU8=":		//카카오
-				url = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
-				break;
-			case "T0ZGTElORTAwMQ==":		//오프라인001
-				url = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
-				break;
-			case "R09PR0xF":		//구글
-				url = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
-				break;
-			default:				//일반유입
-				url = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflow_channel;
-				break;
-		}
-	}
-	else{
-		//inflow_channel 없을경우(일반유입)
-		url = "https://appdkmm.page.link/6R7o";
-	}
-
-	boolean flag = true;
-	String userAgent = request.getHeader("User-Agent").toUpperCase();
-	String IS_MOBILE = "MOBI";
-	if(userAgent.indexOf(IS_MOBILE) > -1) {
-		flag = false;
-	}
-	if(flag){
-	    if(inflow_channel!=null){
-			response.sendRedirect("indexWEB.jsp?inflow_channel="+inflow_channel);
-	    }
-		else {
-			response.sendRedirect("indexWEB.jsp");
-	    }
-	}
-%>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 <head>
-<link rel="icon" href="https://dkmm.infovine.co.kr:9124/upload/doc/favicon.png">
-<link
-	href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR&display=swap"
-	rel="stylesheet" />
-<link
-	href="https://fonts.googleapis.com/css?family=Pretendard&display=swap"
-	rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Pretendard&display=swap" rel="stylesheet" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0S518PP1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-TH0S518PP1');
+</script>
 </head>
 <body>
 	<div class="v2999_43392">
@@ -89,19 +35,19 @@
 		<div class="v2999_43425"></div>
 		<div class="v2999_43426"></div>
 		<div class="v2999_43427">
-			<a href="<%=url%>">
-				<img src="../images/v2999_43455.png">
+			<a href="${url}">
+				<img src="/assets/images/v2999_43455.png">
 			</a>
 		</div>
 		<div class="v2999_43454">
-			<a href="<%=url%>">
-				<img src="../images/v2999_43454.png">
+			<a href="${url}">
+				<img src="/assets/images/v2999_43454.png">
 			</a>
 		</div>
 		<span class="v2999_43468">구글 플레이이 스토어 다운로드</span>
 		<span class="v2999_43469">앱 스토어 다운로드</span>
 		<div class="v2999_43395"></div>
-		<div class="v2999_43396"><img src="images/v2626_39658.png" style="width: 160px;"></div>
+		<div class="v2999_43396"><img src="/assets/images/v2626_39658.png" style="width: 160px;"></div>
 	</div>
 </body>
 </html>
@@ -187,7 +133,7 @@ body {
 .v2999_43405 {
 	width: 361px;
 	height: 112px;
-	background: url("../images/v2955_42159.png");
+	background: url("/assets/images/v2955_42159.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -202,7 +148,7 @@ body {
 .v2999_43417 {
 	width: 226px;
 	height: 455px;
-	background: url("../images/v2999_43417.png");
+	background: url("/assets/images/v2999_43417.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -245,7 +191,7 @@ body {
 .v2999_43420 {
 	width: 216px;
 	height: 444px;
-	background: url("../images/v2626_39652.png");
+	background: url("/assets/images/v2626_39652.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -264,7 +210,7 @@ body {
 .v2999_43421 {
 	width: 226px;
 	height: 455px;
-	background: url("../images/v2999_43421.png");
+	background: url("/assets/images/v2999_43421.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -307,7 +253,7 @@ body {
 .v2999_43424 {
 	width: 216px;
 	height: 444px;
-	background: url("../images/v2626_39656.png");
+	background: url("/assets/images/v2626_39656.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -360,7 +306,7 @@ body {
 .v2999_43427 {
 	width: 152px;
 	height: 41px;
-	background: url("../images/v2999_43455.png");
+	background: url("/assets/images/v2999_43455.png");
 	opacity: 1;
 	position: absolute;
 	top: 1390px;
@@ -413,7 +359,7 @@ body {
 .v2999_43395 {
 	width: 98px;
 	height: 98px;
-	background: url("../images/v2626_39657.png");
+	background: url("/assets/images/v2626_39657.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;

@@ -1,80 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<% 
-	String inflow_channel = request.getParameter("inflow_channel");
-	String url = null;
-	if(inflow_channel!=null){
-		switch(inflow_channel){
-		case "RkFDRUJPT0tfUA==":		//페이스북 프로모션
-			url = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
-			break;
-		case "TkFWRVJfUA==":		//네이버 프로모션
-			url = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
-			break;
-		case "S0FLQU9fUA==":		//카카오 프로모션
-			url = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
-			break;
-		case "R09PR0xFX1A=":		//구글 프로모션
-			url = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
-			break;
-		case "RkFDRUJPT0s=":		//페이스북
-			url = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
-			break;
-		case "TkFWRVI=":		//네이버
-			url = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
-			break;
-		case "S0FLQU8=":		//카카오
-			url = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
-			break;
-		case "T0ZGTElORTAwMQ==":		//오프라인001
-			url = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
-			break;
-		case "R09PR0xF":		//구글
-			url = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
-			break;
-		default:				//일반유입
-			url = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflow_channel;
-			break;
-		}
-	}
-	else{
-		//inflow_channel 없을경우(일반유입)
-		url = "https://appdkmm.page.link/6R7o";
-	}
-	boolean flag = true;
-	String userAgent = request.getHeader("User-Agent").toUpperCase();
-	String IS_MOBILE = "MOBI";
-	if(userAgent.indexOf(IS_MOBILE) > -1) {
-		flag = false;
-	}
-	if(!flag){
-	    if(inflow_channel!=null){
-			response.sendRedirect("index.jsp?inflow_channel="+inflow_channel);
-	    }
-		else {
-			response.sendRedirect("index.jsp");
-	    }
-	}
-%>
 <html>
 <head>
-<link rel="icon" href="https://dkmm.infovine.co.kr:9124/upload/doc/favicon.png">
 <link href="https://fonts.googleapis.com/css?family=Pretendard&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR&amp;display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0S518PP1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-TH0S518PP1');
+</script>
 </head>
 <body>
 	<div class="v2626_39599">
 		<div class="v2626_39600"></div>
 		<div class="v2626_39601"></div>
 		<div class="v2955_42157">
-			<a href="<%=url%>">
-				<img src="images/v2955_42157.png">
+			<a href="${url}">
+				<img src="/assets/images/v2955_42157.png">
 			</a>
 		</div>
 
 		<div class="v2955_42158">
-			<a href="<%=url%>">
-				<img src="images/v2955_42158.png">
+			<a href="${url}">
+				<img src="/assets/images/v2955_42158.png">
 			</a>
 		</div>
 		
@@ -94,7 +45,7 @@
 			</div>
 		</div>
 		<div class="v2626_39657"></div>
-		<div class="v2626_39658"><img src="images/v2626_39658.png" style="width: 186px;"></div>
+		<div class="v2626_39658"><img src="/assets/images/v2626_39658.png" style="width: 186px;"></div>
 		<div class="v2955_42159">
 		</div>
 	</div>
@@ -150,7 +101,7 @@ body {
 .v2955_42157 {
   width: 280px;
   height: 64px;
- /*  background: url("images/v2955_42157.png"); */
+ /*  background: url("/assets/images/v2955_42157.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -163,7 +114,7 @@ body {
 .v2955_42158 {
   width: 280px;
   height: 64px;
-  /* background: url("images/v2955_42158.png"); */
+  /* background: url("/assets/images/v2955_42158.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -224,7 +175,7 @@ body {
 .v2626_39681 {
   width: 713px;
   height: 1047px;
-  /* background: url("images/v2626_39681.png"); */
+  /* background: url("/assets/images/v2626_39681.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -237,7 +188,7 @@ body {
 .v2626_39649 {
   width: 460px;
   height: 913px;
-  /* background: url("images/v2626_39649.png"); */
+  /* background: url("/assets/images/v2626_39649.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -263,7 +214,7 @@ body {
 .v2626_39652 {
   width: 440px;
   height: 904px;
-  background: url("images/v2626_39652.png");
+  background: url("/assets/images/v2626_39652.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -279,7 +230,7 @@ body {
 .v2626_39653 {
   width: 460px;
   height: 922px;
-  /* background: url("images/v2626_39653.png"); */
+  /* background: url("/assets/images/v2626_39653.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -305,7 +256,7 @@ body {
 .v2626_39656 {
   width: 440px;
   height: 904px;
-  background: url("images/v2626_39656.png");
+  background: url("/assets/images/v2626_39656.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -321,7 +272,7 @@ body {
 .v2626_39657 {
   width: 98px;
   height: 98px;
-  background: url("images/v2626_39657.png");
+  background: url("/assets/images/v2626_39657.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -341,7 +292,7 @@ body {
 .v2955_42159 {
   width: 373px;
   height: 116px;
-  background: url("images/v2955_42159.png");
+  background: url("/assets/images/v2955_42159.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

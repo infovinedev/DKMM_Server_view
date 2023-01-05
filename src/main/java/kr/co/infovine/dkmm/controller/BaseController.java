@@ -1,31 +1,18 @@
 package kr.co.infovine.dkmm.controller;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URLEncoder;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.reactive.function.BodyInserters;
-import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.servlet.ModelAndView;
 
-import org.codehaus.jettison.json.JSONObject;
 import kr.co.infovine.dkmm.api.model.base.ResponseModel;
 import lombok.extern.slf4j.Slf4j;
 import reactor.netty.http.client.HttpClient;
@@ -126,7 +113,7 @@ public class BaseController {
 	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
 	public void favicon( HttpServletRequest request, HttpServletResponse reponse ) {
 		try {
-			reponse.sendRedirect("/assets/images/favicon.ico");
+			reponse.sendRedirect("/assets/images/favicon.png");
 		} catch (IOException e) {
 		}
 	}
