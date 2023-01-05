@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="favicon 작업">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/promotion.jsp" afterDir="false" />
+    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="promotion 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/db/model/common/TCommonCodeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/mapper/common/TCommonCodeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/mapper/common/TCommonCodeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/service/common/CommonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/service/common/CommonServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload/doc/nick_sample.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/DkmmViewApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/DkmmViewApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/promotion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/promotion.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +79,8 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/git/billletter_admin",
+    "last_opened_file_path": "C:/Users/user/git/Dkmm_Server_view/src/main/java/kr/co/infovine/dkmm/mapper/common",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +95,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\webapp\WEB-INF\views" />
-      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\webapp\WEB-INF\assets\images" />
+      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\java\kr\co\infovine\dkmm\mapper\common" />
+      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\java\kr\co\infovine\dkmm\service\common" />
+      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\java\kr\co\infovine\dkmm\db\model" />
+      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\java\kr\co\infovine\dkmm\mapper" />
+      <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\java\kr\co\infovine\dkmm\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\git\Dkmm_Server_view\src\main\webapp\WEB-INF\assets\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kr.co.infovine.dkmm.db.model.common" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.DkmmViewApplication">
@@ -187,7 +198,7 @@
       <updated>1672886182975</updated>
       <workItem from="1672886184103" duration="306000" />
       <workItem from="1672886988561" duration="776000" />
-      <workItem from="1672887775060" duration="5290000" />
+      <workItem from="1672887775060" duration="11110000" />
     </task>
     <task id="LOCAL-00001" summary="second git">
       <created>1672889076375</created>
@@ -203,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672895108219</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="promotion 추가">
+      <created>1672896170942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672896170942</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +241,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second git" />
     <MESSAGE value="favicon 작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="favicon 작업" />
+    <MESSAGE value="promotion 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="promotion 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

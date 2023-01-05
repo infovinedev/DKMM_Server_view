@@ -16,7 +16,7 @@ import kr.co.infovine.dkmm.config.InfovineSecurityProperties;
 @PropertySource(value = { "classpath:/props-${server.mode}/application.properties" })
 @EnableConfigurationProperties( InfovineSecurityProperties.class )
 @ComponentScan(basePackages = {"kr.co.infovine.dkmm.**"})
-//@MapperScan(basePackages = {"kr.co.infovine.dkmm.mapper.**"})
+@MapperScan(basePackages = {"kr.co.infovine.dkmm.mapper.**"})
 public class DkmmViewApplication extends SpringBootServletInitializer{
 	
 	public static void main(String[] args) {
