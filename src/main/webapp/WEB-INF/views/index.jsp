@@ -23,14 +23,10 @@
 		<div class="v2999_43405">
 		</div>
 		<div class="v2999_43417">
-			<div class="v2999_43418"></div>
-			<div class="v2999_43419"></div>
 			<div class="v2999_43420"></div>
 		</div>
 		<div class="v2999_43421">
-			<div class="v2999_43422"></div>
-			<div class="v2999_43423"></div>
-			<div class="v2999_43424"></div>
+ 			<div class="v2999_43424"></div>
 		</div>
 		<div class="v2999_43425"></div>
 		<div class="v2999_43426"></div>
@@ -48,6 +44,24 @@
 		<span class="v2999_43469">앱 스토어 다운로드</span>
 		<div class="v2999_43395"></div>
 		<div class="v2999_43396"><img src="/assets/images/v2626_39658.png" style="width: 160px;"></div>
+		
+		
+		<div style="width:100%;height: 10%;position: absolute; bottom: 0;left: 0; background: #242424;">
+			<%-- <div style="width: 27%; margin-top: 5rem; float: left; margin-left: 14rem;">
+				<a href="${urlServerApi}/agree/use" style="font-size: 5px; color: rgba(255,255,255,0.4);">서비스 이용약관</a>
+				<a href="https://dkmm.infovine.co.kr:9123/agree/privacy" style="font-size: 5px; color: rgba(255,255,255,0.4); padding: 20px;">개인정보 처리방침</a>
+				<a href="https://dkmm.infovine.co.kr:9123/agree/location" style="font-size: 5px; color: rgba(255,255,255,0.4);">위치기반 서비스 이용약관</a>
+			</div> --%>
+			<div style="width: 34%; margin-top: 5rem; float: right; margin-right: 24rem;">
+					<p style=" color: rgba(255,255,255,0.4); line-height: 27px; font-size: 6px;">
+							(우) 07320 서울특별시 영등포구 여의대로 24, 40층 (여의도동,전국경제인연합회회관)
+							<br>
+							대표이사 권성준 | 대표번호 02-3775-3366 | FAX 02-718-1610 | 사업자등록번호 106-81-86362
+							<br>
+							COPYRIGHT(C)2016 INFOVINE ALL RIGHT RESERVED.
+					</p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
@@ -63,7 +77,7 @@ body {
 
 .v2999_43392 {
 	width: 100%;
-	height: 1590px;
+	height: 1793px;
 	background: rgba(33, 107, 243, 1);
 	opacity: 1;
 	position: relative;
@@ -148,49 +162,18 @@ body {
 .v2999_43417 {
 	width: 226px;
 	height: 455px;
-	background: url("/assets/images/v2999_43417.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 	opacity: 1;
 	position: absolute;
 	top: 672px;
-	left: 10px;
+	left: 3px;
 	overflow: hidden;
 }
-
-.v2999_43418 {
-	width: 226px;
-	height: 455px;
-	background: rgba(255, 255, 255, 1);
-	opacity: 1;
-	position: relative;
-	top: 0px;
-	left: 0px;
-	border-top-left-radius: 24px;
-	border-top-right-radius: 24px;
-	border-bottom-left-radius: 24px;
-	border-bottom-right-radius: 24px;
-	box-shadow: 0px -3px 40px rgba(0, 0, 0, 0.03999999910593033);
-	overflow: hidden;
-}
-
-.v2999_43419 {
-	width: 216px;
-	height: 378px;
-	background: rgba(247, 247, 247, 1);
-	opacity: 1;
-	position: absolute;
-	top: 4px;
-	left: 5px;
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	overflow: hidden;
-}
-
 .v2999_43420 {
 	width: 216px;
-	height: 444px;
+	height: 457px;
 	background: url("/assets/images/v2626_39652.png");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -199,18 +182,12 @@ body {
 	position: absolute;
 	top: 4px;
 	left: 5px;
-	border: 1px solid rgba(238, 238, 238, 1);
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	border-bottom-left-radius: 16px;
-	border-bottom-right-radius: 16px;
 	overflow: hidden;
 }
 
 .v2999_43421 {
 	width: 226px;
 	height: 455px;
-	background: url("/assets/images/v2999_43421.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -220,39 +197,9 @@ body {
 	left: 133px;
 	overflow: hidden;
 }
-
-.v2999_43422 {
-	width: 226px;
-	height: 455px;
-	background: rgba(255, 255, 255, 1);
-	opacity: 1;
-	position: relative;
-	top: 0px;
-	left: 0px;
-	border-top-left-radius: 24px;
-	border-top-right-radius: 24px;
-	border-bottom-left-radius: 24px;
-	border-bottom-right-radius: 24px;
-	box-shadow: 0px -3px 40px rgba(0, 0, 0, 0.03999999910593033);
-	overflow: hidden;
-}
-
-.v2999_43423 {
-	width: 216px;
-	height: 435px;
-	background: rgba(247, 247, 247, 1);
-	opacity: 1;
-	position: absolute;
-	top: 4px;
-	left: 6px;
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	overflow: hidden;
-}
-
 .v2999_43424 {
 	width: 216px;
-	height: 444px;
+	height: 463px;
 	background: url("/assets/images/v2626_39656.png");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -261,11 +208,6 @@ body {
 	position: absolute;
 	top: 4px;
 	left: 6px;
-	border: 1px solid rgba(238, 238, 238, 1);
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	border-bottom-left-radius: 16px;
-	border-bottom-right-radius: 16px;
 	overflow: hidden;
 }
 
@@ -278,11 +220,6 @@ body {
 	top: 1239px;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 1px solid rgba(255, 255, 255, 1);
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
 	overflow: hidden;
 }
 

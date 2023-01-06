@@ -34,13 +34,10 @@
 		<span class="v2626_39647">이제,대기몇명에서 쉽게,<br> 음식점 대기 현황을 미리 확인하여 줄서지 말자!</span>
 		<span class="v2626_39648">APP 다운로드</span>
 		<div class="v2626_39681">
-			<div class="v2626_39649">
-				<div class="v2626_39650"></div>
+			 <div class="v2626_39649"> 
 				<div class="v2626_39652"></div>
 			</div>
 			<div class="v2626_39653">
-				<div class="v2626_39654"></div>
-				<!-- <div class="v2626_39655"></div> -->
 				<div class="v2626_39656"></div>
 			</div>
 		</div>
@@ -48,19 +45,51 @@
 		<div class="v2626_39658"><img src="/assets/images/v2626_39658.png" style="width: 186px;"></div>
 		<div class="v2955_42159">
 		</div>
+		
+		<div style="width:100%;height: 14%;position: absolute; bottom: 0;left: 0; background: #242424;">
+				<div style="width: 27%; margin-top: 5rem; float: left; margin-left: 14rem;">
+					<a href="${urlServerApi}/agree/use" style="font-size: 18px; color: rgba(255,255,255,0.4);">서비스 이용약관</a>
+					<a href="https://dkmm.infovine.co.kr:9123/agree/privacy" style="font-size: 18px; color: rgba(255,255,255,0.4); padding: 20px;">개인정보 처리방침</a>
+					<a href="https://dkmm.infovine.co.kr:9123/agree/location" style="font-size: 18px; color: rgba(255,255,255,0.4);">위치기반 서비스 이용약관</a>
+				</div>
+				<div style="width: 34%; margin-top: 5rem; float: right; margin-right: 24rem;">
+					<p style=" color: rgba(255,255,255,0.4); line-height: 27px; font-size: 16px;">
+							(우) 07320 서울특별시 영등포구 여의대로 24, 40층 (여의도동,전국경제인연합회회관)
+							<br>
+							대표이사 권성준 | 대표번호 02-3775-3366 | FAX 02-718-1610 | 사업자등록번호 106-81-86362
+							<br>
+							COPYRIGHT(C)2016 INFOVINE ALL RIGHT RESERVED.
+					</p>
+				</div>
+		</div>
 	</div>
 </body>
 </html>
 <style>* {
   box-sizing: border-box;
-  margin:0px!important;
+  margin:0px;
 }
 body {
   font-size: 14px;
 }
+.v2626_39690 {
+  width: 300px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  bottom: 50px;
+  left: 929px;
+  overflow: hidden;
+}
+
+
+
 .v2626_39599 {
   width: 100%;
-  height: 1080px;
+  height: 1466px;
   background: rgba(33,107,243,1);
   opacity: 1;
   position: relative;
@@ -188,32 +217,18 @@ body {
 .v2626_39649 {
   width: 460px;
   height: 913px;
-  /* background: url("/assets/images/v2626_39649.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 134px;
+  top: 82px;
   left: 0px;
-  overflow: hidden;
-}
-.v2626_39650 {
-  width: 460px;
-  height: 779px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  box-shadow: 0px -3px 40px rgba(0, 0, 0, 0.03999999910593033);
   overflow: hidden;
 }
 .v2626_39652 {
   width: 440px;
-  height: 904px;
+  height: 934px;
   background: url("/assets/images/v2626_39652.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -222,15 +237,11 @@ body {
   position: absolute;
   top: 9px;
   left: 10px;
-  border: 1px solid rgba(238,238,238,1);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  overflow: hidden;
+ overflow: hidden;
 }
 .v2626_39653 {
   width: 460px;
   height: 922px;
-  /* background: url("/assets/images/v2626_39653.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -240,22 +251,9 @@ body {
   left: 253px;
   overflow: hidden;
 }
-.v2626_39654 {
-  width: 460px;
-  height: 922px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  box-shadow: 0px -3px 40px rgba(0, 0, 0, 0.03999999910593033);
-  overflow: hidden;
-}
 .v2626_39656 {
   width: 440px;
-  height: 904px;
+  height: 934px;
   background: url("/assets/images/v2626_39656.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -264,9 +262,6 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  border: 1px solid rgba(238,238,238,1);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
   overflow: hidden;
 }
 .v2626_39657 {

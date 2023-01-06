@@ -116,7 +116,7 @@ public class BaseController {
 				model.addObject("url", url);
 			}
 		}
-
+		model.addObject("urlServerApi", urlServerApi);
 		return model;
 	}
 
