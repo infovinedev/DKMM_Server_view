@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="promotion 추가">
+    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="promotion images 추가">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/interceptor/AuthenticationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/interceptor/AuthenticationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/props-dev/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/props-dev/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/props-local/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/props-local/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/props-real/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/props-real/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +21,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kdh" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -30,12 +36,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1672893774" />
+                    <option name="branchName" value="kdh" />
+                    <option name="lastUsedInstant" value="1672907208" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="kdh" />
-                    <option name="lastUsedInstant" value="1672889204" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1672907183" />
                   </RecentBranch>
                 </list>
               </option>
@@ -178,6 +184,7 @@
       <list>
         <item itemvalue="Maven.dkmm_view [clean,install]" />
         <item itemvalue="Maven.dkmm_view [clean,install]" />
+        <item itemvalue="Maven.dkmm_view [clean,install]" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +199,7 @@
       <workItem from="1672886184103" duration="306000" />
       <workItem from="1672886988561" duration="776000" />
       <workItem from="1672887775060" duration="11110000" />
+      <workItem from="1672966138612" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="second git">
       <created>1672889076375</created>
@@ -214,7 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672896170942</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="gitignore추가">
+      <created>1672907052247</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672907052247</updated>
+    </task>
+    <task id="LOCAL-00005" summary="promotion images 추가">
+      <created>1672907175180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672907175180</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +257,9 @@
     <MESSAGE value="second git" />
     <MESSAGE value="favicon 작업" />
     <MESSAGE value="promotion 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="promotion 추가" />
+    <MESSAGE value="gitignore추가" />
+    <MESSAGE value="promotion images 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="promotion images 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

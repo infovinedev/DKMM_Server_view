@@ -33,7 +33,10 @@ public class BaseController {
 	
 	@Value("${url.server.api}")
 	String urlServerApi;
-	
+
+	@Value("${url.main}")
+	String urlMain;
+
 	
 	@RequestMapping(value="/error.do")
 	public ModelAndView error(HttpServletRequest request, HttpServletResponse response) {
@@ -221,7 +224,7 @@ public class BaseController {
 	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
 	public void favicon( HttpServletRequest request, HttpServletResponse reponse ) {
 		try {
-			reponse.sendRedirect("/assets/images/favicon.png");
+			reponse.sendRedirect(urlMain + "/assets/images/favicon.png");
 		} catch (IOException e) {
 		}
 	}

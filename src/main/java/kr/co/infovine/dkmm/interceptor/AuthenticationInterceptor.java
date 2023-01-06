@@ -67,6 +67,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor{
 //
 //					}
 //					else{
+//						String urlMain = LoginSuccessHandler.ApplicationContextProvider.getApplicationContext().getEnvironment().getProperty("url.main");
 //						response.sendRedirect("/admin/loginView.do?errorCode=session");
 //					}
 //				}
