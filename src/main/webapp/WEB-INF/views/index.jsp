@@ -31,12 +31,12 @@
 		<div class="v2999_43425"></div>
 		<div class="v2999_43426"></div>
 		<div class="v2999_43427">
-			<a href="${url}">
+			<a href="${aosUrl}">
 				<img src="/assets/images/v2999_43455.png">
 			</a>
 		</div>
 		<div class="v2999_43454">
-			<a href="${url}">
+			<a href="${iosUrl}">
 				<img src="/assets/images/v2999_43454.png">
 			</a>
 		</div>

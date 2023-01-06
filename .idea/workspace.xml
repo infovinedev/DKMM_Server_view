@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="promotion images 추가">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="main url 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/interceptor/AuthenticationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/interceptor/AuthenticationInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/props-dev/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/props-dev/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/props-local/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/props-local/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/props-real/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/props-real/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/indexWeb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/indexWeb.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +34,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kdh" />
-                    <option name="lastUsedInstant" value="1672907208" />
+                    <option name="lastUsedInstant" value="1672970894" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1672907183" />
+                    <option name="lastUsedInstant" value="1672970846" />
                   </RecentBranch>
                 </list>
               </option>
@@ -107,7 +104,7 @@
       <recent name="kr.co.infovine.dkmm.db.model.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.dkmm_view [clean,install]">
+  <component name="RunManager" selected="Spring Boot.DkmmViewApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Dkmm_Server_view" />
       <method v="2">
@@ -185,6 +182,8 @@
         <item itemvalue="Maven.dkmm_view [clean,install]" />
         <item itemvalue="Maven.dkmm_view [clean,install]" />
         <item itemvalue="Maven.dkmm_view [clean,install]" />
+        <item itemvalue="Maven.dkmm_view [clean,install]" />
+        <item itemvalue="Maven.dkmm_view [clean,install]" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +199,7 @@
       <workItem from="1672886988561" duration="776000" />
       <workItem from="1672887775060" duration="11110000" />
       <workItem from="1672966138612" duration="193000" />
+      <workItem from="1672970352291" duration="1601000" />
     </task>
     <task id="LOCAL-00001" summary="second git">
       <created>1672889076375</created>

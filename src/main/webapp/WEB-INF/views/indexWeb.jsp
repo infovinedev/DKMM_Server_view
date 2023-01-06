@@ -18,13 +18,13 @@
 		<div class="v2626_39600"></div>
 		<div class="v2626_39601"></div>
 		<div class="v2955_42157">
-			<a href="${url}">
+			<a href="${iosUrl}">
 				<img src="/assets/images/v2955_42157.png">
 			</a>
 		</div>
 
 		<div class="v2955_42158">
-			<a href="${url}">
+			<a href="${aosUrl}">
 				<img src="/assets/images/v2955_42158.png">
 			</a>
 		</div>

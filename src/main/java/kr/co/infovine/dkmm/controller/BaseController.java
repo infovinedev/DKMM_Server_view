@@ -48,7 +48,6 @@ public class BaseController {
 	@RequestMapping(value="/index.do")
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView model = new ModelAndView();
-
 		String inflowChannel = request.getParameter("inflow_channel");
 		if(inflowChannel!=null) {
 			if(inflowChannel.equals("")) {
@@ -59,63 +58,120 @@ public class BaseController {
 			inflowChannel = (String) request.getAttribute("inflow_channel");
 		}
 
-		String url = null;
-		if(inflowChannel!=null){
-			switch(inflowChannel){
-				case "RkFDRUJPT0tfUA==":		//페이스북 프로모션
-					url = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
-					break;
-				case "TkFWRVJfUA==":		//네이버 프로모션
-					url = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
-					break;
-				case "S0FLQU9fUA==":		//카카오 프로모션
-					url = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
-					break;
-				case "R09PR0xFX1A=":		//구글 프로모션
-					url = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
-					break;
-				case "RkFDRUJPT0s=":		//페이스북
-					url = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
-					break;
-				case "TkFWRVI=":		//네이버
-					url = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
-					break;
-				case "S0FLQU8=":		//카카오
-					url = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
-					break;
-				case "T0ZGTElORTAwMQ==":		//오프라인001
-					url = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
-					break;
-				case "R09PR0xF":		//구글
-					url = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
-					break;
-				default:				//일반유입
-					url = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflowChannel;
-					break;
-			}
-		}
-		else{
-			//inflow_channel 없을경우(일반유입)
-			url = "https://appdkmm.page.link/6R7o";
-		}
-
+		String aosUrl = null;
+		String iosUrl = null;
 		boolean flag = true;
 		String userAgent = request.getHeader("User-Agent").toUpperCase();
 		String IS_MOBILE = "MOBI";
 		if(userAgent.indexOf(IS_MOBILE) > -1) {
 			flag = false;
 		}
-		if(flag){
-			if(inflowChannel!=null){
-				model.setViewName("indexWeb");
-				model.addObject("inflow_channel", inflowChannel);
-				model.addObject("url", url);
-			}
-			else {
-				model.setViewName("indexWeb");
-				model.addObject("url", url);
+		if(flag){			//웹환경
+			model.setViewName("indexWeb");
+			if (inflowChannel != null) {
+				switch (inflowChannel) {
+					case "RkFDRUJPT0tfUA==":        //페이스북 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=RkFDRUJPT0tfUA==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=RkFDRUJPT0tfUA==";
+						break;
+					case "TkFWRVJfUA==":        //네이버 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=TkFWRVJfUA==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=TkFWRVJfUA==";
+						break;
+					case "S0FLQU9fUA==":        //카카오 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=S0FLQU9fUA==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=S0FLQU9fUA==";
+						break;
+					case "R09PR0xFX1A=":        //구글 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=R09PR0xFX1A=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=R09PR0xFX1A=";
+						break;
+					case "RkFDRUJPT0s=":        //페이스북
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=RkFDRUJPT0s=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=RkFDRUJPT0s=";
+						break;
+					case "TkFWRVI=":        //네이버
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=TkFWRVI=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=TkFWRVI=";
+						break;
+					case "S0FLQU8=":        //카카오
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=S0FLQU8=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=S0FLQU8=";
+						break;
+					case "T0ZGTElORTAwMQ==":        //오프라인001
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=T0ZGTElORTAwMQ==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=T0ZGTElORTAwMQ==";
+						break;
+					case "R09PR0xF":        //구글
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=R09PR0xF";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=R09PR0xF";
+						break;
+					default:                //일반유입
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=" + inflowChannel;
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=" + inflowChannel;
+						break;
+				}
+			} else {
+				//inflow_channel 없을경우(일반유입)
+				aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm";
+				iosUrl = "https://apps.apple.com/app/id6443979602";
 			}
 		}
+		else {
+			model.setViewName("index");
+			if (inflowChannel != null) {
+				switch (inflowChannel) {
+					case "RkFDRUJPT0tfUA==":        //페이스북 프로모션
+						aosUrl = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
+						iosUrl = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
+						break;
+					case "TkFWRVJfUA==":        //네이버 프로모션
+						aosUrl = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
+						iosUrl = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
+						break;
+					case "S0FLQU9fUA==":        //카카오 프로모션
+						aosUrl = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
+						iosUrl = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
+						break;
+					case "R09PR0xFX1A=":        //구글 프로모션
+						aosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
+						iosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
+						break;
+					case "RkFDRUJPT0s=":        //페이스북
+						aosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
+						iosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
+						break;
+					case "TkFWRVI=":        //네이버
+						aosUrl = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
+						iosUrl = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
+						break;
+					case "S0FLQU8=":        //카카오
+						aosUrl = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
+						iosUrl = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
+						break;
+					case "T0ZGTElORTAwMQ==":        //오프라인001
+						aosUrl = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
+						iosUrl = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
+						break;
+					case "R09PR0xF":        //구글
+						aosUrl = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
+						iosUrl = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
+						break;
+					default:                //일반유입
+						aosUrl = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflowChannel;
+						iosUrl = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflowChannel;
+						break;
+				}
+			} else {
+				//inflow_channel 없을경우(일반유입)
+				aosUrl = "https://appdkmm.page.link/6R7o";
+				iosUrl = "https://appdkmm.page.link/6R7o";
+			}
+		}
+
+		model.addObject("inflow_channel", inflowChannel);
+		model.addObject("aosUrl", aosUrl);
+		model.addObject("iosUrl", iosUrl);
 		model.addObject("urlServerApi", urlServerApi);
 		return model;
 	}
@@ -123,7 +179,6 @@ public class BaseController {
 	@RequestMapping(value="/promotion.do")
 	public ModelAndView promotion(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView model = new ModelAndView();
-
 		String inflowChannel = request.getParameter("inflow_channel");
 		if(inflowChannel!=null) {
 			if(inflowChannel.equals("")) {
@@ -134,63 +189,121 @@ public class BaseController {
 			inflowChannel = (String) request.getAttribute("inflow_channel");
 		}
 
-		String url = null;
-		if(inflowChannel!=null){
-			switch(inflowChannel){
-				case "RkFDRUJPT0tfUA==":		//페이스북 프로모션
-					url = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
-					break;
-				case "TkFWRVJfUA==":		//네이버 프로모션
-					url = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
-					break;
-				case "S0FLQU9fUA==":		//카카오 프로모션
-					url = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
-					break;
-				case "R09PR0xFX1A=":		//구글 프로모션
-					url = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
-					break;
-				case "RkFDRUJPT0s=":		//페이스북
-					url = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
-					break;
-				case "TkFWRVI=":		//네이버
-					url = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
-					break;
-				case "S0FLQU8=":		//카카오
-					url = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
-					break;
-				case "T0ZGTElORTAwMQ==":		//오프라인001
-					url = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
-					break;
-				case "R09PR0xF":		//구글
-					url = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
-					break;
-				default:				//일반유입
-					url = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflowChannel;
-					break;
-			}
-		}
-		else{
-			//inflow_channel 없을경우(일반유입)
-			url = "https://appdkmm.page.link/6R7o";
-		}
-
+		String aosUrl = null;
+		String iosUrl = null;
 		boolean flag = true;
 		String userAgent = request.getHeader("User-Agent").toUpperCase();
 		String IS_MOBILE = "MOBI";
 		if(userAgent.indexOf(IS_MOBILE) > -1) {
 			flag = false;
 		}
-		if(flag){
-			if(inflowChannel!=null){
-				model.setViewName("promotion");
-				model.addObject("inflow_channel", inflowChannel);
-				model.addObject("url", url);
-			}
-			else {
-				model.setViewName("promotion");
-				model.addObject("url", url);
+		if(flag){			//웹환경
+			model.setViewName("promotion");
+			if (inflowChannel != null) {
+				switch (inflowChannel) {
+					case "RkFDRUJPT0tfUA==":        //페이스북 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=RkFDRUJPT0tfUA==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=RkFDRUJPT0tfUA==";
+						break;
+					case "TkFWRVJfUA==":        //네이버 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=TkFWRVJfUA==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=TkFWRVJfUA==";
+						break;
+					case "S0FLQU9fUA==":        //카카오 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=S0FLQU9fUA==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=S0FLQU9fUA==";
+						break;
+					case "R09PR0xFX1A=":        //구글 프로모션
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=R09PR0xFX1A=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=R09PR0xFX1A=";
+						break;
+					case "RkFDRUJPT0s=":        //페이스북
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=RkFDRUJPT0s=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=RkFDRUJPT0s=";
+						break;
+					case "TkFWRVI=":        //네이버
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=TkFWRVI=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=TkFWRVI=";
+						break;
+					case "S0FLQU8=":        //카카오
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=S0FLQU8=";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=S0FLQU8=";
+						break;
+					case "T0ZGTElORTAwMQ==":        //오프라인001
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=T0ZGTElORTAwMQ==";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=T0ZGTElORTAwMQ==";
+						break;
+					case "R09PR0xF":        //구글
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=R09PR0xF";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=R09PR0xF";
+						break;
+					default:                //일반유입
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=" + inflowChannel;
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=" + inflowChannel;
+						break;
+				}
+			} else {
+				//inflow_channel 없을경우(일반유입)
+				aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm";
+				iosUrl = "https://apps.apple.com/app/id6443979602";
 			}
 		}
+		else {
+			model.setViewName("promotion");
+			if (inflowChannel != null) {
+				switch (inflowChannel) {
+					case "RkFDRUJPT0tfUA==":        //페이스북 프로모션
+						aosUrl = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
+						iosUrl = "https://appdkmm.page.link/nBmg?inflowChannel=RkFDRUJPT0tfUA==";
+						break;
+					case "TkFWRVJfUA==":        //네이버 프로모션
+						aosUrl = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
+						iosUrl = "https://appdkmm.page.link/4wzb?inflowChannel=TkFWRVJfUA==";
+						break;
+					case "S0FLQU9fUA==":        //카카오 프로모션
+						aosUrl = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
+						iosUrl = "https://appdkmm.page.link/Jt1i?inflowChannel=S0FLQU9fUA==";
+						break;
+					case "R09PR0xFX1A=":        //구글 프로모션
+						aosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
+						iosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
+						break;
+					case "RkFDRUJPT0s=":        //페이스북
+						aosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
+						iosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
+						break;
+					case "TkFWRVI=":        //네이버
+						aosUrl = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
+						iosUrl = "https://appdkmm.page.link/78oJ?inflowChannel=TkFWRVI=";
+						break;
+					case "S0FLQU8=":        //카카오
+						aosUrl = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
+						iosUrl = "https://appdkmm.page.link/94wQ?inflowChannel=S0FLQU8=";
+						break;
+					case "T0ZGTElORTAwMQ==":        //오프라인001
+						aosUrl = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
+						iosUrl = "https://appdkmm.page.link/1oqY?inflowChannel=T0ZGTElORTAwMQ==";
+						break;
+					case "R09PR0xF":        //구글
+						aosUrl = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
+						iosUrl = "https://appdkmm.page.link/FhSa?inflowChannel=R09PR0xF";
+						break;
+					default:                //일반유입
+						aosUrl = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflowChannel;
+						iosUrl = "https://appdkmm.page.link/tTRV?inflowChannel=" + inflowChannel;
+						break;
+				}
+			} else {
+				//inflow_channel 없을경우(일반유입)
+				aosUrl = "https://appdkmm.page.link/6R7o";
+				iosUrl = "https://appdkmm.page.link/6R7o";
+			}
+		}
+
+		model.addObject("inflow_channel", inflowChannel);
+		model.addObject("aosUrl", aosUrl);
+		model.addObject("iosUrl", iosUrl);
+		model.addObject("urlServerApi", urlServerApi);
 
 
 		String today = CommonUtil.getToday();
