@@ -37,7 +37,11 @@ public class BaseController {
 	@Value("${url.main}")
 	String urlMain;
 
-	
+	@RequestMapping(value="/")
+	public void base(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.sendRedirect(urlMain + "/index.do");
+	}
+
 	@RequestMapping(value="/error.do")
 	public ModelAndView error(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView model = new ModelAndView();
