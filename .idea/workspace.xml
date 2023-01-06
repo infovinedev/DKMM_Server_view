@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="main url 추가">
+    <list default="true" id="a95d2330-953f-4f59-a823-9b130f46985b" name="Changes" comment="경로 입력 안할경우 처리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/infovine/dkmm/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/indexWeb.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/indexWeb.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +32,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="kdh" />
-                    <option name="lastUsedInstant" value="1672970894" />
+                    <option name="lastUsedInstant" value="1672973490" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1672970846" />
+                    <option name="lastUsedInstant" value="1672973361" />
                   </RecentBranch>
                 </list>
               </option>
@@ -104,7 +102,7 @@
       <recent name="kr.co.infovine.dkmm.db.model.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DkmmViewApplication">
+  <component name="RunManager" selected="Maven.dkmm_view [clean,install]">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Dkmm_Server_view" />
       <method v="2">
@@ -236,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672907175180</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="경로 입력 안할경우 처리">
+      <created>1672973346580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672973346580</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +264,9 @@
     <MESSAGE value="promotion 추가" />
     <MESSAGE value="gitignore추가" />
     <MESSAGE value="promotion images 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="promotion images 추가" />
+    <MESSAGE value="웹환경으로 접근시 스토어 이동 로직 변경 및 리펙토링" />
+    <MESSAGE value="경로 입력 안할경우 처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="경로 입력 안할경우 처리" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

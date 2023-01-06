@@ -39,7 +39,21 @@ public class BaseController {
 
 	@RequestMapping(value="/")
 	public void base(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		response.sendRedirect(urlMain + "/index.do");
+		String inflowChannel = request.getParameter("inflow_channel");
+		if(inflowChannel!=null) {
+			if(inflowChannel.equals("")) {
+				inflowChannel = (String) request.getAttribute("inflow_channel");
+			}
+		}
+		else {
+			inflowChannel = (String) request.getAttribute("inflow_channel");
+		}
+		if(inflowChannel!=null) {
+			response.sendRedirect(urlMain + "/index.do?inflow_channel=" + inflowChannel);
+		}
+		else{
+			response.sendRedirect(urlMain + "/index.do");
+		}
 	}
 
 	@RequestMapping(value="/error.do")
