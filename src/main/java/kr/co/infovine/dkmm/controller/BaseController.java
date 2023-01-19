@@ -13,10 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import kr.co.infovine.dkmm.api.model.base.ResponseModel;
 import lombok.extern.slf4j.Slf4j;
@@ -62,7 +64,36 @@ public class BaseController {
 		model.setViewName("error");
 		return model;
 	}
-
+	
+	@RequestMapping(value="/termsofservice/use.do")
+	public ModelAndView use(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("termsofservice/use");
+		return model;
+	}
+	
+	@RequestMapping(value="/termsofservice/privacy.do")
+	public ModelAndView privacy(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("termsofservice/privacy");
+		return model;
+	}
+	
+	@RequestMapping(value="/termsofservice/location.do")
+	public ModelAndView location(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("termsofservice/location");
+		return model;
+	}
+	
+	@RequestMapping(value="/termsofservice/marketing.do")
+	public ModelAndView marketing(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("termsofservice/marketing");
+		return model;
+	}
+	
+	
 	@RequestMapping(value="/index.do")
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView model = new ModelAndView();
@@ -190,14 +221,15 @@ public class BaseController {
 		model.addObject("inflow_channel", inflowChannel);
 		model.addObject("aosUrl", aosUrl);
 		model.addObject("iosUrl", iosUrl);
-		model.addObject("urlServerApi", urlServerApi);
+		model.addObject("urlMain", urlMain);
+		//model.addObject("urlServerApi", urlServerApi);
 		return model;
 	}
-
 	@RequestMapping(value="/promotion.do")
 	public ModelAndView promotion(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView model = new ModelAndView();
 		String inflowChannel = request.getParameter("inflow_channel");
+		String share = request.getParameter("share");
 		if(inflowChannel!=null) {
 			if(inflowChannel.equals("")) {
 				inflowChannel = (String) request.getAttribute("inflow_channel");
@@ -215,6 +247,7 @@ public class BaseController {
 		if(userAgent.indexOf(IS_MOBILE) > -1) {
 			flag = false;
 		}
+		model.addObject("mobileCheck", flag);
 		if(flag){			//웹환경
 			model.setViewName("promotion");
 			if (inflowChannel != null) {
@@ -321,7 +354,8 @@ public class BaseController {
 		model.addObject("inflow_channel", inflowChannel);
 		model.addObject("aosUrl", aosUrl);
 		model.addObject("iosUrl", iosUrl);
-		model.addObject("urlServerApi", urlServerApi);
+		model.addObject("urlMain", urlMain);
+		//model.addObject("urlServerApi", urlServerApi);
 
 
 		String today = CommonUtil.getToday();
@@ -343,6 +377,28 @@ public class BaseController {
 				if ("start_date".equals(codeValue) && "future".equals(mode)) {
 					today = codeDescription;
 				}
+				//프로모션 종료되었을 때
+				if("close_date".equals(codeValue) && codeDescription != null){
+					int compareToday = Integer.parseInt(today); //오늘 날짜
+					int compareCodeDescription = Integer.parseInt(codeDescription); //프로모션 종료 날짜
+					if(compareToday >= compareCodeDescription) {
+						RedirectView redirectView = new RedirectView();
+						
+						if(inflowChannel !=null && share != null){
+							redirectView.setUrl("/index.do?inflow_channel=" + inflowChannel + "&share="+share);
+						}else if(inflowChannel !=null) {
+							redirectView.setUrl("/index.do?inflow_channel="+inflowChannel);
+						}else if(share != null) {
+							redirectView.setUrl("/index.do?share="+share);
+						}else {
+							redirectView.setUrl("/index.do");
+						}
+						redirectView.setExposeModelAttributes(false);
+						model.setView(redirectView);
+					}
+					
+				}
+				
 			} else {
 				model.addObject(commonCode.getCodeGroup(), commonCode.getCodeDescription());
 			}

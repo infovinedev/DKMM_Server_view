@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>대기몇명</title>
 <link href="https://fonts.googleapis.com/css?family=Pretendard&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR&amp;display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0S518PP1"></script>
@@ -11,6 +12,22 @@
 	gtag('js', new Date());
 
 	gtag('config', 'G-TH0S518PP1');
+	
+	function callFunction(terms){
+		var url = "";
+		switch(terms){
+			case 'use':
+					url = "${urlMain}/termsofservice/use.do";
+					break;
+			case 'privacy': 
+					url = "${urlMain}/termsofservice/privacy.do";
+					break;
+			case 'location':
+					url = "${urlMain}/termsofservice/location.do";
+					break;
+		}
+		window.open(url);
+	}
 </script>
 </head>
 <body>
@@ -19,19 +36,19 @@
 		<div class="v2626_39601"></div>
 		<div class="v2955_42157">
 			<a href="${iosUrl}">
-				<img src="/assets/images/v2955_42157.png">
+				<img src="/assets/images/v2955_42157.png" style="width:280px">
 			</a>
 		</div>
 
 		<div class="v2955_42158">
 			<a href="${aosUrl}">
-				<img src="/assets/images/v2955_42158.png">
+				<img src="/assets/images/v2955_42158.png" style="width:280px">
 			</a>
 		</div>
 		
 		<span class="v2626_39645">구글 플레이이 스토어 다운로드</span>
 		<span class="v2626_39646">앱 스토어 다운로드</span>
-		<span class="v2626_39647">이제,대기몇명에서 쉽게,<br> 음식점 대기 현황을 미리 확인하여 줄서지 말자!</span>
+		<span class="v2626_39647">이제 대기몇명에서 쉽게,<br> 음식점 대기 현황을 미리 확인하여 줄서지 말자!</span>
 		<span class="v2626_39648">APP 다운로드</span>
 		<div class="v2626_39681">
 			 <div class="v2626_39649"> 
@@ -47,13 +64,14 @@
 		</div>
 		
 		<div style="width:100%;height: 14%;position: absolute; bottom: 0;left: 0; background: #242424;">
-				<div style="width: 27%; margin-top: 5rem; float: left; margin-left: 14rem;">
-					<a href="${urlServerApi}/agree/use" style="font-size: 18px; color: rgba(255,255,255,0.4);">서비스 이용약관</a>
-					<a href="https://dkmm.infovine.co.kr:9123/agree/privacy" style="font-size: 18px; color: rgba(255,255,255,0.4); padding: 20px;">개인정보 처리방침</a>
-					<a href="https://dkmm.infovine.co.kr:9123/agree/location" style="font-size: 18px; color: rgba(255,255,255,0.4);">위치기반 서비스 이용약관</a>
+				<div style="width: 27%; margin-top: 3.2rem; float: left; margin-left: 14rem;">
+					<a href="javascript:callFunction('use');" style="font-size: 16px; color: rgba(255,255,255,0.4);">서비스 이용약관</a>
+					<a href="javascript:callFunction('privacy');" style="font-size: 16px; color: rgba(255,255,255,0.4); padding: 20px;">개인정보 처리방침</a>
+					<a href="javascript:callFunction('location');" style="font-size: 16px; color: rgba(255,255,255,0.4);">위치기반 서비스 이용약관</a>
 				</div>
-				<div style="width: 34%; margin-top: 5rem; float: right; margin-right: 24rem;">
-					<p style=" color: rgba(255,255,255,0.4); line-height: 27px; font-size: 16px;">
+				<div style="width: 34%; margin-top: 3rem; float: right; margin-right: 24rem;">
+					<p style=" color: rgba(255,255,255,0.4); line-height: 27px; font-size: 14px;">
+							(주)인포바인<br>
 							(우) 07320 서울특별시 영등포구 여의대로 24, 40층 (여의도동,전국경제인연합회회관)
 							<br>
 							대표이사 권성준 | 대표번호 02-3775-3366 | FAX 02-718-1610 | 사업자등록번호 106-81-86362
@@ -103,7 +121,7 @@ body {
   background: rgba(29,198,226,1);
   opacity: 0.8999999761581421;
   position: absolute;
-  top: 562px;
+  top: 580px;
   left: -44px;
   border-top-left-radius: 1000px;
   border-top-right-radius: 1000px;
@@ -143,7 +161,6 @@ body {
 .v2955_42158 {
   width: 280px;
   height: 64px;
-  /* background: url("/assets/images/v2955_42158.png"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -285,7 +302,7 @@ body {
   overflow: hidden;
 }
 .v2955_42159 {
-  width: 373px;
+  width: 400px;
   height: 116px;
   background: url("/assets/images/v2955_42159.png");
   background-repeat: no-repeat;

@@ -15,9 +15,19 @@
    <definition name="index" template="/WEB-INF/views/index.jsp">					<!-- 인입페이지 tiles 필요없음 -->
    </definition>
 
-    <definition name="promotion" template="/WEB-INF/views/promotion.jsp">					<!-- 프로모션 인입페이지 tiles 필요없음 -->
-    </definition>
-
+   <definition name="promotion" template="/WEB-INF/views/promotion.jsp">					<!-- 프로모션 인입페이지 tiles 필요없음 -->
+   </definition>
+   
+   <!-- 이용약관 인입페이지 tiles 필요없음 -->
+   <definition name="termsofservice/use" template="/WEB-INF/views/termsofservice/use.jsp">
+   </definition>
+   <definition name="termsofservice/privacy" template="/WEB-INF/views/termsofservice/privacy.jsp">
+   </definition>
+   <definition name="termsofservice/location" template="/WEB-INF/views/termsofservice/location.jsp">
+   </definition>
+   <definition name="termsofservice/marketing" template="/WEB-INF/views/termsofservice/marketing.jsp">
+   </definition>
+   
    <definition name="*/*" extends=".mainLayout">
        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
    </definition>
