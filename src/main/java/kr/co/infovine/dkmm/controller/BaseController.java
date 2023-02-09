@@ -135,6 +135,14 @@ public class BaseController {
 						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=R09PR0xFX1A=";
 						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=R09PR0xFX1A=";
 						break;
+					case "UFBPTV9Q":        //뽐뿌 프로모션 20230209추가
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=UFBPTV9Q";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=UFBPTV9Q";
+						break;
+					case "UElDQV9Q":        //피카 프로모션 20230209추가
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=UElDQV9Q";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=UElDQV9Q";
+						break;
 					case "RkFDRUJPT0s=":        //페이스북
 						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=RkFDRUJPT0s=";
 						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=RkFDRUJPT0s=";
@@ -185,6 +193,14 @@ public class BaseController {
 					case "R09PR0xFX1A=":        //구글 프로모션
 						aosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
 						iosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
+						break;
+					case "UFBPTV9Q":        //뽐뿌 프로모션 20230209추가
+						aosUrl = "https://appdkmm.page.link/Yihd?inflow_channel=UFBPTV9Q";
+						iosUrl = "https://appdkmm.page.link/Yihd?inflow_channel=UFBPTV9Q";
+						break;
+					case "UElDQV9Q":        //피카 프로모션 20230209추가
+						aosUrl = "https://appdkmm.page.link/332g?inflow_channel=UElDQV9Q";
+						iosUrl = "https://appdkmm.page.link/332g?inflow_channel=UElDQV9Q";
 						break;
 					case "RkFDRUJPT0s=":        //페이스북
 						aosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
@@ -268,6 +284,14 @@ public class BaseController {
 						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=R09PR0xFX1A=";
 						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=R09PR0xFX1A=";
 						break;
+					case "UFBPTV9Q":        //뽐뿌 프로모션 20230209추가
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=UFBPTV9Q";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=UFBPTV9Q";
+						break;
+					case "UElDQV9Q":        //피카 프로모션 20230209추가
+						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=UElDQV9Q";
+						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=UElDQV9Q";
+						break;
 					case "RkFDRUJPT0s=":        //페이스북
 						aosUrl = "https://play.google.com/store/apps/details?id=co.kr.infovine.dkmm&inflowChannel=RkFDRUJPT0s=";
 						iosUrl = "https://apps.apple.com/app/id6443979602?inflowChannel=RkFDRUJPT0s=";
@@ -319,6 +343,14 @@ public class BaseController {
 						aosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
 						iosUrl = "https://appdkmm.page.link/HyGq?inflowChannel=R09PR0xFX1A=";
 						break;
+					case "UFBPTV9Q":        //뽐뿌 프로모션 20230209추가
+						aosUrl = "https://appdkmm.page.link/Yihd?inflow_channel=UFBPTV9Q";
+						iosUrl = "https://appdkmm.page.link/Yihd?inflow_channel=UFBPTV9Q";
+						break;
+					case "UElDQV9Q":        //피카 프로모션 20230209추가
+						aosUrl = "https://appdkmm.page.link/332g?inflow_channel=UElDQV9Q";
+						iosUrl = "https://appdkmm.page.link/332g?inflow_channel=UElDQV9Q";
+						break;
 					case "RkFDRUJPT0s=":        //페이스북
 						aosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
 						iosUrl = "https://appdkmm.page.link/UJjq?inflowChannel=RkFDRUJPT0s=";
@@ -361,22 +393,23 @@ public class BaseController {
 		String today = CommonUtil.getToday();
 		String mode = "current";
 
-		String futureKey = ServletRequestUtils.getStringParameter(request, "futureKey", "");
+	/*	String futureKey = ServletRequestUtils.getStringParameter(request, "futureKey", "");
 		if ("3qa@kljh2KslWTEOJk2390ufPmio2".equals(futureKey)) {
 			mode = "future";
-		}
-
+		} 사용 X
+	 */
 		List<TCommonCodeModel> list = commonService.selectCommonCodeByPromotion(mode);
 		for (TCommonCodeModel commonCode: list) {
 			if ("promotion_date".equals(commonCode.getCodeGroup())) {
-				String codeValue = commonCode.getCodeValue().replace("future_", "");
+				//String codeValue = commonCode.getCodeValue().replace("future_", ""); 사용 X
+				String codeValue = commonCode.getCodeValue();
 				String codeDescription = commonCode.getCodeDescription();
 
 				model.addObject(codeValue, codeDescription);
 
-				if ("start_date".equals(codeValue) && "future".equals(mode)) {
+				/*if ("start_date".equals(codeValue) && "future".equals(mode)) {
 					today = codeDescription;
-				}
+				} 사용 X */
 				//프로모션 종료되었을 때
 				if("close_date".equals(codeValue) && codeDescription != null){
 					int compareToday = Integer.parseInt(today); //오늘 날짜

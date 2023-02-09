@@ -14,6 +14,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>대기몇명</title>
 <meta property="og:type" content="website" />
 <meta property="og:title" content="참여하고 경품받자!"/>
 <meta property="og:description" content="대기몇명 런칭 프로모션 참여"/>
@@ -23,7 +24,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 <meta charset="utf-8">
 
-<link href="https://fonts.googleapis.com/css?family=Pretendard&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR&amp;display=swap" rel="stylesheet">
 <link href="/assets/css/terms_dkmm.css" rel="stylesheet" type="text/css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH0S518PP1"></script>
@@ -204,28 +204,26 @@
 							<div class="ui_modal ui_modal_container js_bgTransparent" style="z-index: 9001;position: fixed; outline: none;background-clip: padding-box;top: 50%;left: 51%;border-radius: 3px;margin-left: -90px;margin-top: -154px;width: 195px;height: 294px;-webkit-tap-highlight-color: transparent;" tabindex="0">
 								<c:choose>
 									<c:when test="${mobileCheck != true}">
-									<!-- 카카오톡 -->
-									<a id="kakao-link-btn" href="javascript:kakaoShare()">
-										<img style="width: 70px; margin-right: 1rem;" src="/assets/images/promotion/btn_Katalk.png" alt="카카오톡 공유하기 버튼"/>
-									</a>
-									<!-- 카카오스토리 -->
-									<a id="share-kakaostory-button" href="javascript:shareKakaoStory()">
-										<img style="width: 70px;margin-left: 3rem;" src="/assets/images/promotion/btn_Kastory.png" alt="카카오스토리 공유하기 버튼"/>
-									</a>
-									<!-- 밴드 -->
-									<a href="javascript:fun_shareBane()"><img style="width: 70px; margin-right: 1rem;margin-top: 2rem;"  src="/assets/images/promotion/btn_band.png" alt="밴드공유"/></a>
-									<!-- facebook -->
-									<a href="javascript:shareFacebook()" class="btn btn-default">
-										<img style="width: 70px; margin-left: 3rem; margin-top: 2rem;" src="/assets/images/promotion/btn_Facebook.png" alt="페이스북 공유하기 버튼"/>
-									</a>
+										<!-- 카카오톡 -->
+										<a id="kakao-link-btn" href="javascript:kakaoShare()">
+											<img style="width: 70px; margin-right: 1rem;" src="/assets/images/promotion/btn_Katalk.png" alt="카카오톡 공유하기 버튼"/>
+										</a>
+										<!-- 카카오스토리 -->
+										<a id="share-kakaostory-button" href="javascript:shareKakaoStory()">
+											<img style="width: 70px;margin-left: 3rem;" src="/assets/images/promotion/btn_Kastory.png" alt="카카오스토리 공유하기 버튼"/>
+										</a>
+										<!-- 밴드 -->
+										<a href="javascript:fun_shareBane()"><img style="width: 70px; margin-right: 1rem;margin-top: 2rem;"  src="/assets/images/promotion/btn_band.png" alt="밴드공유"/></a>
+										<!-- facebook -->
+										<a href="javascript:shareFacebook()" class="btn btn-default">
+											<img style="width: 70px; margin-left: 3rem; margin-top: 2rem;" src="/assets/images/promotion/btn_Facebook.png" alt="페이스북 공유하기 버튼"/>
+										</a>
 									</c:when>
 								</c:choose>	
 									<!-- mail -->
 									<a href="javascript:link_email()" class="btn btn-default">
 										<img style="width: 70px; margin-right: 1rem;margin-top: 2rem;" src="/assets/images/promotion/btn_mail.png" alt="메일 공유하기 버튼"/>
 									</a>
-									<!-- <a href="mailto:?">웹메일테스트</a> -->
-									<!-- <a href="mailto:someone@yoursite.com" target="_blank" rel="noopener noreferrer">웹메일테스트</a> -->
 									<!-- 링크복사 -->
 									<span class="button gray medium">
 										<a href="#" onclick="fun_copyTheLink(); return false;">
@@ -240,7 +238,7 @@
 						</div>
 				</c:when>
 			<c:otherwise>
-				<!-- 종료되었을때 이미지 -->
+				<!-- 프로모션 start data가 오늘날짜보다 작을-->
 				<img src="/assets/images/promotion/theend.jpg" style="width:100%;" />
 				<div style="position: absolute; top: 24%; left: 50%; transform: translate(-50%, -50%);">
 				<img src="/assets/images/promotion/google.png" style="width:100%;" />
@@ -251,9 +249,24 @@
 				<div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
 				<img src="/assets/images/promotion/share.png" style="width:100%;" />
 				</div>
+				
+				
+				
+				<%-- <div style="position: absolute; top: 24%; left: 50%; transform: translate(-50%, -50%);">
+					<a href="${aosUrl}">
+						<img src="/assets/images/promotion/google.png" style="width:100%;"/>
+					</a>
+				</div>
+				<div style="position: absolute; top: 27%; left: 50%; transform: translate(-50%, -50%);">
+					<a href="${iosUrl}">
+						<img src="/assets/images/promotion/appStore.png" style="width:100%;"/>
+					</a>
+				</div>						
+				<div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
+					<img src="/assets/images/promotion/share.png" style="width:100%;"/>
+				</div> --%>
 			</c:otherwise>
 			</c:choose>
-
 		</div>
 		
 		<div style="<c:if test='${mobileCheck}'>display: inline-block; width:30%;</c:if>">
