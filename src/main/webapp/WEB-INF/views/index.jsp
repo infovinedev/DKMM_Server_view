@@ -59,7 +59,7 @@
 				<img src="/assets/images/v2999_43454.png" style="width:176px">
 			</a>
 		</div>
-		<span class="v2999_43468">구글 플레이이 스토어 다운로드</span>
+		<span class="v2999_43468">구글 플레이 스토어 다운로드</span>
 		<span class="v2999_43469">앱 스토어 다운로드</span>
 		<div class="v2999_43395"></div>
 		<div class="v2999_43396"><img src="/assets/images/v2626_39658.png" style="width: 160px;"></div>

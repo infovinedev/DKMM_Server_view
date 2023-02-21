@@ -46,7 +46,7 @@
 			</a>
 		</div>
 		
-		<span class="v2626_39645">구글 플레이이 스토어 다운로드</span>
+		<span class="v2626_39645">구글 플레이 스토어 다운로드</span>
 		<span class="v2626_39646">앱 스토어 다운로드</span>
 		<span class="v2626_39647">이제 대기몇명에서 쉽게,<br> 음식점 대기 현황을 미리 확인하여 줄서지 말자!</span>
 		<span class="v2626_39648">APP 다운로드</span>
